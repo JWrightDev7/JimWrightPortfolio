@@ -1,0 +1,208 @@
+/****************************************************************
+*****************************************************************
+Website Name: James' Favourite Music Artist
+Website URL: localhost
+Website Author: James Wright
+Copyright 2021. All Rights Reserved
+
+Colour Guide
+*************
+Dark grey - #1A1A1D, hsla(240, 5%, 11%, 1)
+light grey - #4E4E50 rgba(78, 78, 80, 1)
+light blue - #5094e7
+Aqua - #66FCF1 rgba(102, 252, 241, 1)
+
+Typography Guide
+*****************
+Headings - sans serif
+    H1 - 32px
+    H2 - 26px
+body - sans serif 16px
+
+***************************************************************/
+/***************************************************************** 
+0. Body Styles ---------------------------------------- styles.css
+1. Heading Styles ------------------------------------- styles.css
+2. Article Styles ------------------------------------- styles.css
+3. Image/Figure Styles -------------------------------- styles.css
+4. Paragraph Styles ----------------------------------- styles.css
+5. List Styles ---------------------------------------- styles.css
+6. Footer Styles -------------------------------------- styles.css
+*****************************************************************/
+
+/*****************************************************************
+0. CSS Reset ---------------------------------------myersReset.css
+*****************************************************************/
+/*Body Styles*/
+body{
+    max-width: 900px;
+    color: white;
+    margin:0px auto;
+    text-align: center;
+    clear: both;
+    background-color: hsla(240, 5%, 11%, 1);
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+/***********************************Heading Styles*************************/
+h1{
+    font-size: 32px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+    margin: 25px;
+}
+
+h2{
+    font-size: 26px;
+    text-decoration: underline;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+/***********************************Article Styles*************************/
+article{position: relative;}
+article:nth-child(2){
+    height: 450px;
+    position: relative;
+    top: 800px;
+}
+
+/***********************************Image / figure Styles******************/
+figure{
+    display: table;
+    width: 350px;
+    float: right;
+}
+
+article > h1 + figure:first-of-type{
+    position: relative;
+    top: 50px;
+}
+img{padding: 5px;}
+figure img:first-child{width: 100%;}
+
+figure figcaption{
+    display: table-caption;
+    caption-side: bottom;
+    font-size: 10px; 
+}
+
+figure figcaption a{color: rgba(78, 78, 80, 1);}
+figure figcaption a:visited{color: rgba(102, 252, 241, 1);}
+figure figcaption a:hover{color: #5094e7;}
+
+body > figure:nth-child(3){
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 50px;
+    clear: both;
+    position: relative;
+    bottom: 650px;
+}
+
+article:nth-of-type(2) figure{
+    position: relative;
+    bottom: 300px;
+}
+
+/***********************************Paragraph Styles***********************/
+article:first-child p{
+    width: 55%;
+    position: relative;
+    left: 45px;
+    top: 40px;
+    text-align: left;
+    font-size: 20px;
+}
+
+article p:nth-child(2){
+    margin-bottom: 15px;
+    text-align: left;
+}
+/***********************************list Styles****************************/
+p + ul{
+    text-align: left;
+    position: relative;
+    left: 25px;
+    width: 500px;
+}
+
+ul > li{
+    list-style-type: disc;
+    padding: 3px;
+}
+
+/***********************************Footer Styles**************************/
+footer{
+    position: relative;
+    clear: both;
+    text-align: center;
+    margin: 50px auto;
+    bottom: 50px;
+}
+
+@media screen and (max-width:800px){
+    body{max-width: 100%;}
+
+    article:first-child p{
+        width: 75%;
+        clear: both;
+        margin: 0 auto;
+        position: static;
+    }
+
+    article > h1 + figure:first-of-type{
+        position: static;
+        margin: 0 auto;
+        float: none;
+    }
+    figcaption{margin-bottom: 1em;}
+
+    body > figure:nth-child(3){
+        width: 100%;
+        position: static;
+        margin: 1em auto;
+        padding: 0;
+    }
+
+    figure img:first-child{width: 75%;}
+    
+    body > figure figcaption{
+        width: 75%;
+        margin: 1em auto;
+
+    }
+
+    article:nth-child(2){
+        position: static;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    p + ul{
+        position: static;
+        width: 100%;
+        padding-left: 1em;
+    }
+
+    article:nth-of-type(2) figure{
+        position: static;
+        width: 100%;
+        margin: 1em auto 0;
+    }
+
+    article:nth-of-type(2) figure img{width: 50%;}
+
+    article:nth-of-type(2) figure figcaption{
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+
+    footer{position: static;}
+}
+
